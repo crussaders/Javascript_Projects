@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+      #loading, #results {
+        display: none;
+      }
+    </style>
+
+    <title>Loan Calculator</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <!-- for  6 column div with margin auto -->
+        <div class="col-md-6 mx-auto">
+          <!-- marginal top = mt-5 -->
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+            <form id="loan-form">
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon">$</span>
+                  <input type="number" class="form-control" id="amount" placeholder="Loan Amount" aria-describedby="basic-addon">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon">%</span>
+                  <input type="number" class="form-control" id="interest" placeholder="Interest" aria-describedby="basic-addon">
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="years" placeholder="Years to Repay">
+              </div>
+              <div class="form-group">
+                <input type="submit" value="CALCULATE" class="btn btn-dark btn-block">
+              </div>
+            </form>
+            <!-- Loader Here -->
+             <div id="loading">
+              <img src="1.gif" alt="">
+            </div>
+
+
+            <!-- Results -->
+            <div id="results" class="pt-4">
+              <h5>RESULTS</h5>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon">Monthly Payment</span>
+                  <input type="number" class="form-control" id="monthly-payment" aria-describedby="basic-addon" disabled>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon">Total Payment</span>
+                  <input type="number" class="form-control" id="total-payment" aria-describedby="basic-addon" disabled>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon">Total Interest</span>
+                  <input type="number" class="form-control" id="total-interest" aria-describedby="basic-addon" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>     
+      </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
